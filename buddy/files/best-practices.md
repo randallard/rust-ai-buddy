@@ -11,7 +11,7 @@ Here are some best practices about coding.
 
 ## Coding
 
-- All errors should return the crate or module type Result alias which maps to the corresponding moedule error. This allows to normalize the error taxonomy while providing flexibility.
+- All errors should return the crate or module type Result alias which maps to the corresponding module error. This allows to normalize the error taxonomy while providing flexibility.
 - Modules should be per area of concern, and not try to do too many things. Otherwise, split them into submodules.
 - Typically, files should not exceed 500 lines of code (excluding testing). This is not a hard rule, but splitting things early helps with further refactoring.
 - Make sure that IDs that are strings are wrapped into their own types.
