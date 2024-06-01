@@ -4,6 +4,8 @@ mod ais;
 mod buddy;
 mod error;
 
+use ais::{asst::{self, CreateConfig}, new_oa_client};
+
 pub use self::error::{Error, Result};
 
 // endregion: --- Modules
@@ -19,7 +21,14 @@ async fn main() {
 }
 
 async fn start() -> Result<()> {
-    println!("Hello, world!");
+    let oac = new_oa_client()?;
+
+    let asst_config = CreateConfig {
+        name: "buddy-01".to_string(),
+        model: "gpt-3.5-turbo-1106".to_string(),
+    };
+    let asst_id = asst::create(&oac, asst_config).await?;
+    println!("->> asst_id: {asst_id}");
     Ok(())
 }
 

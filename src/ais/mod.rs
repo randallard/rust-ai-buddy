@@ -10,7 +10,7 @@ use crate::Result;
 
 // region:    --- Client
 
-const ENV_OPENAI_API_KEY: &str = "OPEN_API_KEY";
+const ENV_OPENAI_API_KEY: &str = "OPENAI_API_KEY";
 
 pub type OaClient = Client<OpenAIConfig>;
 
