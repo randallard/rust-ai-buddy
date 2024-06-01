@@ -5,7 +5,7 @@ edition = "2021"
 
 [lints.rust]
 unsafe_code = "forbid"
-# unused = "allow" # For early dev.
+unused = "allow" # For early dev.
 
 [dependencies]
 # -- Async
